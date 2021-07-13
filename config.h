@@ -76,14 +76,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("librewolf") },
 	/*{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },*/
     /* Scripts */
-    { ALTKEY,                       XK_l,      spawn,          SHCMD("i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png") },
+    { 0,                            XK_F11,    spawn,          SHCMD("i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png") },
     { ALTKEY,                       XK_s,      spawn,          SHCMD("process") },
     { MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("mdisk") },
     { MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("confs") },
     { MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("todo")  },
     { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("passmenu") },
-    { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("gscreenshot -sc") },
-    { MODKEY,                       XK_s,      spawn,          SHCMD("gscreenshot -c") },
+    { MODKEY,                       XK_Print,  spawn,          SHCMD("gscreenshot -sc") },
+    { 0,                            XK_Print,  spawn,          SHCMD("gscreenshot -c") },
     { MODKEY,                       XK_w,      spawn,          SHCMD("mstat") },
     { MODKEY,                       XK_p,      spawn,          SHCMD("dmenu-recent") },
     /* Cmus */
@@ -156,4 +156,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
