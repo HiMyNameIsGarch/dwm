@@ -72,6 +72,5 @@ sudo make clean install
 | Modkey + equal | setgaps |  +5 |
 | Modkey + Shift + equal | setgaps |  0 |
 | Modkey + Shift + q | quit |   |
-| Key | Function | Argument |
 
 If you want the same output over your config, you can use my [script](https://github.com/HiMyNameIsGarch/dotfiles/blob/main/.local/bin/rice).
