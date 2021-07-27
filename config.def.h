@@ -68,6 +68,7 @@ static const char *dmenucmd[] = { "dmenu-recent", NULL };
 static const char *termcmd[] = { "alacritty", NULL };
 static const char *qutebcmd[] = { "qutebrowser", NULL };
 static const char *wolfcmd[] = { "librewolf", NULL };
+static const char *sitecmd[] = { "sites", NULL };
 
 /* bindings */
 static Key keys[] = {
@@ -88,6 +89,7 @@ static Key keys[] = {
     { 0,                            XK_Print,  spawn,          SHCMD("gscreenshot -c") },
     { MODKEY,                       XK_w,      spawn,          SHCMD("mstat") },
     { MODKEY,                       XK_p,      spawn,          SHCMD("dmenu-recent") },
+    { MODKEY,                       XK_u,      spawn,          {.v = sitecmd } },
     /* Cmus */
     { MODKEY,                       XK_F2,     spawn,          SHCMD("cmus-remote --volume -5%") },
     { MODKEY,                       XK_F3,     spawn,          SHCMD("cmus-remote --volume +5%") },

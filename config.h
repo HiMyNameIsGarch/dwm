@@ -66,14 +66,17 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu-recent", NULL };
 static const char *termcmd[] = { "alacritty", NULL };
+static const char *qutebcmd[] = { "qutebrowser", NULL };
+static const char *wolfcmd[] = { "librewolf", NULL };
+static const char *sitecmd[] = { "sites", NULL };
 
 /* bindings */
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 
     /* Programs */
-	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("qutebrowser") },
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("librewolf") },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = qutebcmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = wolfcmd  } },
 	/*{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },*/
     /* Scripts */
     { 0,                            XK_F11,    spawn,          SHCMD("i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png") },
@@ -86,6 +89,7 @@ static Key keys[] = {
     { 0,                            XK_Print,  spawn,          SHCMD("gscreenshot -c") },
     { MODKEY,                       XK_w,      spawn,          SHCMD("mstat") },
     { MODKEY,                       XK_p,      spawn,          SHCMD("dmenu-recent") },
+    { MODKEY,                       XK_u,      spawn,          {.v = sitecmd } },
     /* Cmus */
     { MODKEY,                       XK_F2,     spawn,          SHCMD("cmus-remote --volume -5%") },
     { MODKEY,                       XK_F3,     spawn,          SHCMD("cmus-remote --volume +5%") },
