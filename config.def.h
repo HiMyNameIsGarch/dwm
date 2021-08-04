@@ -89,6 +89,7 @@ static Key keys[] = {
     { 0,                            XK_Print,  spawn,          SHCMD("gscreenshot -c") },
     { MODKEY,                       XK_w,      spawn,          SHCMD("mstat") },
     { MODKEY,                       XK_p,      spawn,          SHCMD("dmenu-recent") },
+    { MODKEY,                       XK_e,      spawn,          SHCMD("lyrics") },
     { MODKEY,                       XK_u,      spawn,          {.v = sitecmd } },
     /* Cmus */
     { MODKEY,                       XK_F2,     spawn,          SHCMD("cmus-remote --volume -5%") },

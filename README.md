@@ -33,6 +33,7 @@ sudo make clean install
 | Print | spawns | gscreenshot -c |
 | Super + w | spawns | mstat |
 | Super + p | spawns | dmenu-recent |
+| Super + e | spawns | lyrics |
 | Super + u | spawns |  sites  |
 | Super + F2 | spawns | cmus-remote --volume -5% |
 | Super + F3 | spawns | cmus-remote --volume +5% |
