@@ -2,7 +2,6 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -79,6 +78,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = wolfcmd  } },
 	/*{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },*/
     /* Scripts */
+    { 0,                            XK_F12,    spawn,          SHCMD("feh --no-fehbg --bg-scale --randomize --recursive /home/himynameisgarch/Media/Wallpapers") },
     { 0,                            XK_F11,    spawn,          SHCMD("i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png") },
     { ALTKEY,                       XK_s,      spawn,          SHCMD("process") },
     { MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("mdisk") },
@@ -129,9 +129,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
-	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
     /* Workspaces */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)

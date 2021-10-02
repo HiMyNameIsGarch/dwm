@@ -8,7 +8,6 @@ I use dwmblocks as my bar and you can found it in this repo.
  - [Actual fullscreen](https://dwm.suckless.org/patches/actualfullscreen/) - Toggle fullscreen for a window.
  - [Autostart](https://dwm.suckless.org/patches/autostart/) - Start some programs when dwm starts.
  - [Bar height](https://dwm.suckless.org/patches/bar_height/) - Change default value for bar height.
- - [Fullgaps](https://dwm.suckless.org/patches/fullgaps/) - Add gaps between windows.
  - [No border](https://dwm.suckless.org/patches/noborder/) - When a single window is visible, do not show the border.
  - [Pertag](https://dwm.suckless.org/patches/pertag/) - Keep some values per tag.
  - [Warp](https://dwm.suckless.org/patches/warp/) - When switching a window, put the cursor in the middle of it.
@@ -70,9 +69,6 @@ sudo make clean install
 | Super + period | focusmon |  +1 |
 | Super + Shift + comma | tagmon |  -1 |
 | Super + Shift + period | tagmon |  +1 |
-| Super + minus | setgaps |  -5 |
-| Super + equal | setgaps |  +5 |
-| Super + Shift + equal | setgaps |  0 |
 | Super + Shift + q | quit |   |
 
 If you want the same output over your config, you can use my [script](https://github.com/HiMyNameIsGarch/dotfiles/blob/main/.local/bin/rice).
