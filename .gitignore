@@ -1,4 +1,6 @@
 *.o
 *.orig
 *.rej
+*.def.h
 dwm
+patches
