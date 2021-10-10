@@ -22,6 +22,7 @@ sudo make clean install
 | :-: | :-: | :- |
 | Super + Shift + b | spawns |  qutebrowser  |
 | Super + Shift + l | spawns |  librewolf  |
+| F12 | spawns | feh --no-fehbg --bg-scale --randomize --recursive /home/himynameisgarch/Media/Wallpapers |
 | F11 | spawns | i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png |
 | Alt + s | spawns | process |
 | Super + Shift + m | spawns | mdisk |
@@ -34,12 +35,12 @@ sudo make clean install
 | Super + p | spawns | dmenu-recent |
 | Super + e | spawns | lyrics |
 | Super + u | spawns |  sites  |
-| Super + F2 | spawns | cmus-remote --volume -5% |
-| Super + F3 | spawns | cmus-remote --volume +5% |
-| F5 | spawns | cmus-remote --stop |
-| F6 | spawns | cmus-remote --prev |
-| F7 | spawns | cmus-pp |
-| F8 | spawns | cmus-remote --next |
+| AudioLowerVolume | spawns | cmus-remote --volume -5% |
+| AudioRaiseVolume | spawns | cmus-remote --volume +5% |
+| AudioStop | spawns | cmus-remote --stop |
+| AudioPrev | spawns | cmus-remote --prev |
+| AudioPlay | spawns | cmus-pp |
+| AudioNext | spawns | cmus-remote --next |
 | F2 | spawns | vol down |
 | F3 | spawns | vol up |
 | Super + F1 | spawns | vol toggle |

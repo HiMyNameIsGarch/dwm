@@ -69,6 +69,8 @@ static const char *qutebcmd[] = { "qutebrowser", NULL };
 static const char *wolfcmd[] = { "librewolf", NULL };
 static const char *sitecmd[] = { "sites", NULL };
 
+#include <X11/XF86keysym.h>
+
 /* bindings */
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -92,12 +94,12 @@ static Key keys[] = {
     { MODKEY,                       XK_e,      spawn,          SHCMD("lyrics") },
     { MODKEY,                       XK_u,      spawn,          {.v = sitecmd } },
     /* Cmus */
-    { MODKEY,                       XK_F2,     spawn,          SHCMD("cmus-remote --volume -5%") },
-    { MODKEY,                       XK_F3,     spawn,          SHCMD("cmus-remote --volume +5%") },
-    { 0,                            XK_F5,     spawn,          SHCMD("cmus-remote --stop") },
-    { 0,                            XK_F6,     spawn,          SHCMD("cmus-remote --prev") },
-    { 0,                            XK_F7,     spawn,          SHCMD("cmus-pp") },
-    { 0,                            XK_F8,     spawn,          SHCMD("cmus-remote --next") },
+    { 0,            XF86XK_AudioLowerVolume,   spawn,          SHCMD("cmus-remote --volume -5%") },
+    { 0,            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("cmus-remote --volume +5%") },
+    { 0,            XF86XK_AudioStop,          spawn,          SHCMD("cmus-remote --stop") },
+    { 0,            XF86XK_AudioPrev,          spawn,          SHCMD("cmus-remote --prev") },
+    { 0,            XF86XK_AudioPlay,          spawn,          SHCMD("cmus-pp") },
+    { 0,            XF86XK_AudioNext,          spawn,          SHCMD("cmus-remote --next") },
     /* Audio */
     { 0,                            XK_F2,     spawn,          SHCMD("vol down") },
     { 0,                            XK_F3,     spawn,          SHCMD("vol up") },
