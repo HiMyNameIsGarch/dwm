@@ -3,7 +3,8 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 If you want to see my scripts that I used in some of the bindings, check out [this](https://github.com/HiMyNameIsGarch/dotfiles/tree/main/.local/bin).
 ## Bar
-I use dwmblocks as my bar and you can found it in this repo.
+I use dwmblocks as my bar and you can found it in this repo. \
+The scripts for dwmblocks can be found [here](https://github.com/HiMyNameIsGarch/dotfiles/tree/main/.local/bin/dwm-bar/)
 ## Patches
  - [Actual fullscreen](https://dwm.suckless.org/patches/actualfullscreen/) - Toggle fullscreen for a window.
  - [Autostart](https://dwm.suckless.org/patches/autostart/) - Start some programs when dwm starts.
