@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh = 23; /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=13" };
+static const int user_bh = 22; /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12" };
 static const char dmenufont[]       = "monospace:size=10";
 
 static const char norm_fg[] = "#fbf1c7";
@@ -84,7 +84,7 @@ static Key keys[] = {
     { 0,                            XK_F11,    spawn,          SHCMD("i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png") },
     { ALTKEY,                       XK_s,      spawn,          SHCMD("process") },
     { MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("mdisk") },
-    { MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("confs") },
+    { MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("confs menu") },
     { MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("todo")  },
     { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("passmenu") },
     { MODKEY,                       XK_Print,  spawn,          SHCMD("gscreenshot -sc") },
@@ -94,12 +94,12 @@ static Key keys[] = {
     { MODKEY,                       XK_e,      spawn,          SHCMD("lyrics") },
     { MODKEY,                       XK_u,      spawn,          {.v = sitecmd } },
     /* Cmus */
-    { 0,            XF86XK_AudioLowerVolume,   spawn,          SHCMD("cmus-remote --volume -5%") },
-    { 0,            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("cmus-remote --volume +5%") },
-    { 0,            XF86XK_AudioStop,          spawn,          SHCMD("cmus-remote --stop") },
-    { 0,            XF86XK_AudioPrev,          spawn,          SHCMD("cmus-remote --prev") },
+    { 0,            XF86XK_AudioLowerVolume,   spawn,          SHCMD("cmus-remote -v -5%") },
+    { 0,            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("cmus-remote -v +5%") },
+    { 0,            XF86XK_AudioStop,          spawn,          SHCMD("cmus-remote -s") },
+    { 0,            XF86XK_AudioPrev,          spawn,          SHCMD("cmus-remote -r && mstat") },
     { 0,            XF86XK_AudioPlay,          spawn,          SHCMD("cmus-pp") },
-    { 0,            XF86XK_AudioNext,          spawn,          SHCMD("cmus-remote --next") },
+    { 0,            XF86XK_AudioNext,          spawn,          SHCMD("cmus-remote -n && mstat") },
     /* Audio */
     { 0,                            XK_F2,     spawn,          SHCMD("vol down") },
     { 0,                            XK_F3,     spawn,          SHCMD("vol up") },
