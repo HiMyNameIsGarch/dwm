@@ -25,16 +25,20 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "web", "dev", "sys", "git", "cht", "vid", "doc", "box", "mus" };
+static const char *tags[] = { "web", "dev", "sys", "cht", "zed", "std", "box", "tor", "mus" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 }
+	/* class                    instance    title    tags mask   isfloating   monitor */
+    { "qutebrowser",            NULL,       NULL,    1 << 0,     0,           -1 },
+    { "LibreWolf",              NULL,       NULL,    1 << 2,     0,           -1 },
+    { "firefox",                NULL,       NULL,    1 << 3,     0,           -1 },
+    { "Element",                NULL,       NULL,    1 << 4,     0,           -1 },
+    { "VirtualBox Manager",     NULL,       NULL,    1 << 6,     0,           -1 },
+	{ "qBittorrent",            NULL,       NULL,    1 << 7,     0,           -1 },
 };
 
 /* layout(s) */
@@ -87,8 +91,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("confs menu") },
     { MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("todo")  },
     { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("passmenu") },
-    { MODKEY,                       XK_Print,  spawn,          SHCMD("gscreenshot -sc") },
-    { 0,                            XK_Print,  spawn,          SHCMD("gscreenshot -c") },
+    { MODKEY,                       XK_Print,  spawn,          SHCMD("screenshot") },
+    { 0,                            XK_Print,  spawn,          SHCMD("screenshot a") },
     { MODKEY,                       XK_w,      spawn,          SHCMD("mstat") },
     { MODKEY,                       XK_p,      spawn,          SHCMD("dmenu-recent") },
     { MODKEY,                       XK_e,      spawn,          SHCMD("lyrics") },
