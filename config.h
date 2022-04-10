@@ -37,7 +37,7 @@ static const Rule rules[] = {
     { "LibreWolf",              NULL,       NULL,    1 << 2,     0,           -1 },
     { "firefox",                NULL,       NULL,    1 << 3,     0,           -1 },
     { "Element",                NULL,       NULL,    1 << 4,     0,           -1 },
-    { "VirtualBox Manager",     NULL,       NULL,    1 << 6,     0,           -1 },
+    { "Virt-manager",           NULL,       NULL,    1 << 6,     0,           -1 },
 	{ "qBittorrent",            NULL,       NULL,    1 << 7,     0,           -1 },
 };
 
