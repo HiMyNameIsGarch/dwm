@@ -21,27 +21,26 @@ sudo make clean install
 ## Bindings
 | Key | Function | Argument |
 | :-: | :-: | :- |
+| AudioStop | spawns | feh --no-fehbg --bg-scale --randomize --recursive /home/himynameisgarch/Media/Wallpapers |
 | Super + Shift + b | spawns |  qutebrowser  |
 | Super + Shift + l | spawns |  librewolf  |
-| F12 | spawns | feh --no-fehbg --bg-scale --randomize --recursive /home/himynameisgarch/Media/Wallpapers |
-| F11 | spawns | i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png |
+| Pause | spawns | i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png |
 | Alt + s | spawns | process |
 | Super + Shift + m | spawns | mdisk |
-| Super + Shift + c | spawns | confs |
+| Super + Shift + c | spawns | confs menu |
 | Super + Shift + t | spawns | todo |
 | Super + Shift + p | spawns | passmenu |
-| Super + Print | spawns | gscreenshot -sc |
-| Print | spawns | gscreenshot -c |
+| Super + Print | spawns | screenshot |
+| Print | spawns | screenshot a |
 | Super + w | spawns | mstat |
 | Super + p | spawns | dmenu-recent |
 | Super + e | spawns | lyrics |
 | Super + u | spawns |  sites  |
-| AudioLowerVolume | spawns | cmus-remote --volume -5% |
-| AudioRaiseVolume | spawns | cmus-remote --volume +5% |
-| AudioStop | spawns | cmus-remote --stop |
-| AudioPrev | spawns | cmus-remote --prev |
+| AudioLowerVolume | spawns | cmus-remote -v -5% |
+| AudioRaiseVolume | spawns | cmus-remote -v +5% |
+| AudioPrev | spawns | cmus-remote -r && mstat |
 | AudioPlay | spawns | cmus-pp |
-| AudioNext | spawns | cmus-remote --next |
+| AudioNext | spawns | cmus-remote -n && mstat |
 | F2 | spawns | vol down |
 | F3 | spawns | vol up |
 | Super + F1 | spawns | vol toggle |

@@ -79,13 +79,15 @@ static const char *sitecmd[] = { "sites", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 
+    /* I know audio key to change a wallpaper, my thought: useless key in a good position */
+    { 0,                  XF86XK_AudioStop,    spawn,          SHCMD("feh --no-fehbg --bg-scale --randomize --recursive /home/himynameisgarch/Media/Wallpapers") },
+
     /* Programs */
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = qutebcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = wolfcmd  } },
 	/*{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },*/
     /* Scripts */
-    { 0,                            XK_F12,    spawn,          SHCMD("feh --no-fehbg --bg-scale --randomize --recursive /home/himynameisgarch/Media/Wallpapers") },
-    { 0,                            XK_F11,    spawn,          SHCMD("i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png") },
+    { 0,                            XK_Pause,  spawn,          SHCMD("i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png") },
     { ALTKEY,                       XK_s,      spawn,          SHCMD("process") },
     { MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("mdisk") },
     { MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("confs menu") },
@@ -100,7 +102,6 @@ static Key keys[] = {
     /* Cmus */
     { 0,            XF86XK_AudioLowerVolume,   spawn,          SHCMD("cmus-remote -v -5%") },
     { 0,            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("cmus-remote -v +5%") },
-    { 0,            XF86XK_AudioStop,          spawn,          SHCMD("cmus-remote -s") },
     { 0,            XF86XK_AudioPrev,          spawn,          SHCMD("cmus-remote -r && mstat") },
     { 0,            XF86XK_AudioPlay,          spawn,          SHCMD("cmus-pp") },
     { 0,            XF86XK_AudioNext,          spawn,          SHCMD("cmus-remote -n && mstat") },
