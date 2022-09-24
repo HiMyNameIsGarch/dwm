@@ -10,8 +10,6 @@ The scripts for dwmblocks can be found [here](https://github.com/HiMyNameIsGarch
  - [Autostart](https://dwm.suckless.org/patches/autostart/) - Start some programs when dwm starts.
  - [Bar height](https://dwm.suckless.org/patches/bar_height/) - Change default value for bar height.
  - [No border](https://dwm.suckless.org/patches/noborder/) - When a single window is visible, do not show the border.
- - [Pertag](https://dwm.suckless.org/patches/pertag/) - Keep some values per tag.
- - [Warp](https://dwm.suckless.org/patches/warp/) - When switching a window, put the cursor in the middle of it.
 ## Installation
 ```
 git clone https://github.com/HiMyNameIsGarch/dwm
