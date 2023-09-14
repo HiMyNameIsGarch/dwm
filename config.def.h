@@ -106,12 +106,12 @@ static Key keys[] = {
     { 0,            XF86XK_AudioPlay,          spawn,          SHCMD("cmus-pp") },
     { 0,            XF86XK_AudioNext,          spawn,          SHCMD("cmus-remote -n && mstat") },
     /* Audio */
+    { 0,                            XK_F1,     spawn,          SHCMD("vol toggle") },
     { 0,                            XK_F2,     spawn,          SHCMD("vol down") },
     { 0,                            XK_F3,     spawn,          SHCMD("vol up") },
-    { MODKEY,                       XK_F1,     spawn,          SHCMD("vol toggle") },
-    { 0,                            XK_F1,     spawn,          SHCMD("audio 1") },
-    { MODKEY,                       XK_F4,     spawn,          SHCMD("vol mute") },
-    { 0,                            XK_F4,     spawn,          SHCMD("audio 0") },
+    // Brightness
+    { 0,                            XK_F5,     spawn,          SHCMD("shedlight d") },
+    { 0,                            XK_F6,     spawn,          SHCMD("shedlight u") },
     /* System */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -140,7 +140,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3) 
+	TAGKEYS(                        XK_4,                      3)
     TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
