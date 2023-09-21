@@ -39,6 +39,7 @@ static const Rule rules[] = {
     { "Element",                NULL,       NULL,    1 << 4,     0,           -1 },
     { "Virt-manager",           NULL,       NULL,    1 << 6,     0,           -1 },
 	{ "qBittorrent",            NULL,       NULL,    1 << 7,     0,           -1 },
+	{ "Spotify",                NULL,       NULL,    1 << 8,     0,           -1 },
 };
 
 /* layout(s) */
@@ -80,14 +81,14 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 
     /* I know audio key to change a wallpaper, my thought: useless key in a good position */
-    { 0,                  XF86XK_AudioStop,    spawn,          SHCMD("feh --no-fehbg --bg-scale --randomize --recursive /home/himynameisgarch/Media/Wallpapers") },
+    // { 0,                  XF86XK_AudioStop,    spawn,          SHCMD("feh --no-fehbg --bg-scale --randomize --recursive /home/garch/Media/Wallpapers") },
 
     /* Programs */
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = qutebcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = wolfcmd  } },
 	/*{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },*/
     /* Scripts */
-    { 0,                            XK_Pause,  spawn,          SHCMD("i3lock -i /home/himynameisgarch/Media/Wallpapers/Simple/GruvTown.png") },
+    { 0,                            XK_Pause,  spawn,          SHCMD("i3lock -i /home/garch/Media/Wallpapers/Simple/GruvTown.png") },
     { ALTKEY,                       XK_s,      spawn,          SHCMD("process") },
     { MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("mdisk") },
     { MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("confs menu") },
@@ -106,12 +107,12 @@ static Key keys[] = {
     { 0,            XF86XK_AudioPlay,          spawn,          SHCMD("cmus-pp") },
     { 0,            XF86XK_AudioNext,          spawn,          SHCMD("cmus-remote -n && mstat") },
     /* Audio */
-    { 0,                            XK_F1,     spawn,          SHCMD("vol toggle") },
     { 0,                            XK_F2,     spawn,          SHCMD("vol down") },
     { 0,                            XK_F3,     spawn,          SHCMD("vol up") },
     // Brightness
     { 0,                            XK_F5,     spawn,          SHCMD("shedlight d") },
-    { 0,                            XK_F6,     spawn,          SHCMD("shedlight u") },
+    // Invert screen hahaha
+    { 0,                            XK_F7,     spawn,          SHCMD("rotate_screen") },
     /* System */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
