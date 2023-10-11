@@ -69,7 +69,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu-recent", NULL };
-static const char *termcmd[] = { "alacritty", NULL };
+static const char *termcmd[] = { "alacritty", "-e", "tmux", NULL };
 static const char *qutebcmd[] = { "qutebrowser", NULL };
 static const char *wolfcmd[] = { "librewolf", NULL };
 static const char *sitecmd[] = { "sites", NULL };
@@ -101,16 +101,16 @@ static Key keys[] = {
     { MODKEY,                       XK_e,      spawn,          SHCMD("lyrics") },
     { MODKEY,                       XK_u,      spawn,          {.v = sitecmd } },
     /* Cmus */
-    { 0,            XF86XK_AudioLowerVolume,   spawn,          SHCMD("cmus-remote -v -5%") },
-    { 0,            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("cmus-remote -v +5%") },
-    { 0,            XF86XK_AudioPrev,          spawn,          SHCMD("cmus-remote -r && mstat") },
-    { 0,            XF86XK_AudioPlay,          spawn,          SHCMD("cmus-pp") },
-    { 0,            XF86XK_AudioNext,          spawn,          SHCMD("cmus-remote -n && mstat") },
+    { 0,            XF86XK_AudioPlay,          spawn,          SHCMD("playerctl play-pause") },
+    { 0,            XF86XK_AudioStop,          spawn,          SHCMD("playerctl stop") },
+    { 0,            XF86XK_AudioPrev,          spawn,          SHCMD("playerctl previous") },
+    { 0,            XF86XK_AudioNext,          spawn,          SHCMD("playerctl next") },
     /* Audio */
     { 0,                            XK_F2,     spawn,          SHCMD("vol down") },
     { 0,                            XK_F3,     spawn,          SHCMD("vol up") },
     // Brightness
     { 0,                            XK_F5,     spawn,          SHCMD("shedlight d") },
+    { 0,                            XK_F6,     spawn,          SHCMD("shedlight u") },
     // Invert screen hahaha
     { 0,                            XK_F7,     spawn,          SHCMD("rotate_screen") },
     /* System */
