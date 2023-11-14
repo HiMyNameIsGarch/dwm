@@ -113,6 +113,8 @@ static Key keys[] = {
     { 0,                            XK_F6,     spawn,          SHCMD("shedlight u") },
     // Invert screen hahaha
     { 0,                            XK_F7,     spawn,          SHCMD("rotate_screen") },
+    // Bluetooth easy connect
+    { 0,                            XK_F12,    spawn,          SHCMD("blth") },
     /* System */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
