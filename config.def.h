@@ -69,7 +69,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu-recent", NULL };
-static const char *termcmd[] = { "alacritty", "-e", "tmux", NULL };
+// new_ttmux is a custom script found in .local/bin/
+static const char *termdmenucmd[] = { "alacritty", "-e","new_ttmux", "dmenu", NULL };
+static const char *termcmd[] = { "alacritty", "-e", "new_ttmux", NULL };
 static const char *qutebcmd[] = { "qutebrowser", NULL };
 static const char *wolfcmd[] = { "librewolf", NULL };
 static const char *sitecmd[] = { "sites", NULL };
@@ -115,8 +117,11 @@ static Key keys[] = {
     { 0,                            XK_F7,     spawn,          SHCMD("rotate_screen") },
     // Bluetooth easy connect
     { 0,                            XK_F12,    spawn,          SHCMD("blth") },
+    // ytfzf with actually dmenu ( kinda )
+    { 0,                            XK_F9,     spawn,          SHCMD("ytpls") },
     /* System */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termdmenucmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

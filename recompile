@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+#
+cp config.def.h config.h
+sudo -A make clean install
