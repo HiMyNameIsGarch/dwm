@@ -9,20 +9,7 @@ static const int user_bh = 22; /* 0 means that dwm will calculate bar height, >=
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12" };
 static const char dmenufont[]       = "monospace:size=10";
 
-static const char norm_fg[] = "#fbf1c7";
-static const char norm_bg[] = "#282828";
-static const char norm_border[] = "#282828";
-
-static const char sel_fg[] = "#ebdbb2";
-static const char sel_bg[] = "#d65d0e";
-static const char sel_border[] = "#d5c4a1";
-
-
-static const char *colors[][3]      = {
-    /*               fg           bg         border                         */
-    [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
-    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
-};
+#include "colors.h"
 
 /* tagging */
 static const char *tags[] = { "web", "dev", "sys", "zed", "cht", "nul", "box", "tor", "mus" };
