@@ -62,6 +62,7 @@ static const char *termcmd[] = { "alacritty", "-e", "new_ttmux", NULL };
 static const char *qutebcmd[] = { "qutebrowser", NULL };
 static const char *wolfcmd[] = { "librewolf", NULL };
 static const char *sitecmd[] = { "sites", NULL };
+static const char *gumball[] = { "gumball", NULL };
 
 #include <X11/XF86keysym.h>
 
@@ -89,6 +90,7 @@ static Key keys[] = {
     { MODKEY,                       XK_p,      spawn,          SHCMD("dmenu-recent") },
     { MODKEY,                       XK_e,      spawn,          SHCMD("lyrics") },
     { MODKEY,                       XK_u,      spawn,          {.v = sitecmd } },
+    { MODKEY,                       XK_F4,     spawn,          {.v = gumball } },
     /* Cmus */
     { 0,            XF86XK_AudioPlay,          spawn,          SHCMD("playerctl play-pause") },
     { 0,            XF86XK_AudioStop,          spawn,          SHCMD("playerctl stop") },
